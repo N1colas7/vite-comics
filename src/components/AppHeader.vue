@@ -66,7 +66,7 @@
         </a>
         <nav>
             <ul>
-                <li v-for="(item, index) in navbar" :ket="index">
+                <li v-for="(item, index) in navbar" :key="index">
                     <a :href="item.url" :class="item.active ? 'active' : ''">
                     {{item.label}}</a>
                 </li>
@@ -75,7 +75,7 @@
     </header>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
     @use '../styles/partials/variables' as *;
     @use '../styles/partials/mixins' as *;
 
@@ -98,6 +98,7 @@
 
             &.active, &:hover{
                 color: $primary;
+                border-bottom: 3px solid $primary;
                 
             }
         }
