@@ -61,17 +61,46 @@
 
 <template lang="">
     <header>
-        <div>
-            <a href="/" class="brand">
+        <a href="/" class="brand">
                 <img src="../assets/vue-dc-comics-1/img/dc-logo.png" alt="logo">
-            </a>
-        </div>
-        <div>
-            
-        </div>
+        </a>
+        <nav>
+            <ul>
+                <li v-for="(item, index) in navbar" :ket="index">
+                    <a :href="item.url" :class="item.active ? 'active' : ''">
+                    {{item.label}}</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 </template>
 
 <style lang="scss">
-    
+    @use '../styles/partials/variables' as *;
+    @use '../styles/partials/mixins' as *;
+
+    header{
+        display: flex;
+        a img {
+            padding: 1rem;
+            height: 80%;
+        }
+    }
+    ul{
+        list-style: none;
+        margin: 2rem 1rem;
+        @include center;
+        li a {
+            display:inline-block;
+            padding: 1rem;
+            text-decoration: none;
+            font-size:13px;
+
+            &.active, &:hover{
+                color: $primary;
+                
+            }
+        }
+    }
+
 </style>

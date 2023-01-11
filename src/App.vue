@@ -14,13 +14,10 @@
 
 <template lang="">
     <AppHeader />
+    <AppContent />
+    <AppFooter />
 </template>
 
 <style lang="scss">
     @use './styles/generals.scss' as *;
-    *{
-        padding: 0;
-        margin: 0 auto;
-        box-sizing: border-box;
-    }
 </style>
