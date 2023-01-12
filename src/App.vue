@@ -7,7 +7,7 @@
         components:{
             AppHeader,
             AppContent,
-            AppHeader
+            AppFooter
         }
     }
 </script>

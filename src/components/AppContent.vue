@@ -5,23 +5,23 @@
                 linkContent:[
                     {
                         label:'Digital Comics',
-                        url: "../assets/vue-dc-comics-1/img/buy-comics-digital-comics.png"
+                        url: "buy-comics-digital-comics.png"
                     },
                     {
                         label:'DC Merchandise',
-                        url: "../assets/vue-dc-comics-1/img/buy-comics-merchandise.png"
+                        url: "buy-comics-merchandise.png"
                     },
                     {
                         label:'Susbscriptions',
-                        url: "../assets/vue-dc-comics-1/img/buy-comics-subscriptions.png"
+                        url: "buy-comics-subscriptions.png"
                     },
                     {
                         label:'Comic Shop Locator',
-                        url: "../assets/vue-dc-comics-1/img/buy-comics-shop-locator.png"
+                        url: "buy-comics-shop-locator.png"
                     },
                     {
                         label:'DC Power Visa',
-                        url: "../assets/vue-dc-comics-1/img/buy-dc-power-visa.svg"
+                        url: "buy-dc-power-visa.svg"
                     },
                 ]
             }
@@ -38,14 +38,14 @@
     <div class="linkContent-container">
         <ul>
             <li v-for="(link, i) in linkContent" :key="i">
-                    <img :src= "link.url" alt="image" >
-                    <a :href= link.label>{{ link.label }}</a>
+                    <img class="image" :src="`/img/${link.url}`" alt="image" >
+                    <a class="text-image" :href= link.label>{{ link.label }}</a>
             </li>
         </ul>   
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
     @use '../styles/partials/variables' as *;
     @use '../styles/partials/mixins' as *;
 
@@ -67,5 +67,19 @@
     }
     .linkContent-container{
         background-color: $primary;
+        @include center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .image{
+        height: 70px;
+        width: 70px;
+        vertical-align: middle;
+        padding: 10px;
+    }
+
+    .text-image{
+        color: white;
+        vertical-align: middle;
     }
 </style>

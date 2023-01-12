@@ -62,7 +62,7 @@
 <template lang="">
     <header>
         <a href="/" class="brand">
-                <img src="../assets/vue-dc-comics-1/img/dc-logo.png" alt="logo">
+                <img src="/img/dc-logo.png" alt="logo">
         </a>
         <nav>
             <ul>
