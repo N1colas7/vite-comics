@@ -52,6 +52,25 @@
             </div>    
         </div>        
     </div>
+    <div class="end-foot">
+        <div class="container-end">
+            <div class="col-end">
+                <h4 class="white-text">SING-UP NOW</h4>
+            </div>
+            <div class="col-end">
+                <div class="follow-us">
+                    <h4>FOLLOW US</h4>
+                </div>
+                <div class="social">
+                    <img src="img/footer-facebook.png" alt="image">
+                    <img src="img/footer-twitter.png" alt="image">
+                    <img src="img/footer-youtube.png" alt="image">
+                    <img src="img/footer-pinterest.png" alt="image">
+                    <img src="img/footer-periscope.png" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -91,6 +110,29 @@
                 color: #fff;
                 opacity: 0.3;
                 }
+            }
+    }
+    .container-end{
+        @include center;
+        background-color: rgb(51, 50, 50);
+        justify-content: space-around;
+            .col-end{
+                margin: 1rem 1rem;
+                display: flex;
+                 .white-text{
+                    color: #fff;
+                    opacity: 0.8;
+                    border: 2px solid $primary;
+                    padding: 15px;
+                 }
+                 .follow-us{
+                    padding: 15px;
+                    color: $primary;
+                 }
+                 img{
+                    padding: 5px;
+                 }
+
             }
     }
 </style>
