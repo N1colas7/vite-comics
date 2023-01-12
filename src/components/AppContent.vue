@@ -32,7 +32,12 @@
 <template>
     <div>
         <div class="contents-image">
-            <h1> &lt;---- Contents goes here ----></h1>
+            <div class="jumbo">
+                <img src="/img/jumbotron.jpg">
+            </div>
+            <div class="library-image">
+                
+             </div>   
         </div>
     </div>
     <div class="linkContent-container">
@@ -52,7 +57,6 @@
     .contents-image{
         background-color: black;
         color:white;
-        height: 100px;
         width: 100%;
     }
     ul{
@@ -81,5 +85,11 @@
     .text-image{
         color: white;
         vertical-align: middle;
+    }
+    .jumbo{
+        img{
+            height: 400px;
+            width: 100%;
+        }
     }
 </style>

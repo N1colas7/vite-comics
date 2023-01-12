@@ -59,16 +59,15 @@
     @use '../styles/partials/mixins' as *;
     
     .foot-sx{
-        width: 50%;
+        width: 30%;
     }
     .foot-dx{
-        width: 50%;
+        width: 30%;
         img{
-            width: 50%;
+            width: 100%;
             height: 100%;
-            padding: 30px;
             position: relative;
-            left: 100px;
+            left: 30px;
         }
     }
     .container{
@@ -76,6 +75,8 @@
         display: flex;
     }
     .col-footer{
+        @include center;
+        margin: 2rem 1rem;
         display: flex;
             h4{
                 color: #fff;
@@ -83,6 +84,7 @@
             ul{
                 list-style: none;
                 padding: 10px;
+                flex-wrap: wrap;
             li a{
                 text-decoration: none;
                 font-size:13px;
