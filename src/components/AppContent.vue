@@ -1,7 +1,18 @@
 <script>
+    import CardSeries from './CardSeries.vue';
+    import DataFile from '../assets/data/dataitems.js';
+
+
     export default {
+        components:{
+            CardSeries
+        },
         data() {
             return {
+                products: DataFile,
+                serie:[
+
+                ],
                 linkContent:[
                     {
                         label:'Digital Comics',
@@ -36,7 +47,10 @@
                 <img src="/img/jumbotron.jpg">
             </div>
             <div class="library-image">
-                
+                <div class="row">
+                    <CardSeries v-for="(item, index) in serie " :key="index" :serie="item"/>
+                    <CardSeries />
+                </div>        
              </div>   
         </div>
     </div>
@@ -91,5 +105,8 @@
             height: 400px;
             width: 100%;
         }
+    }
+    .row{
+        display: flex;
     }
 </style>
