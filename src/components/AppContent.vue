@@ -1,6 +1,6 @@
 <script>
     import CardSeries from './CardSeries.vue';
-    import DataFile from '../assets/data/dataitems.js';
+    import dataitems from '../assets/data/dataitems.js';
 
 
     export default {
@@ -9,10 +9,7 @@
         },
         data() {
             return {
-                products: DataFile,
-                serie:[
-
-                ],
+                products: dataitems,
                 linkContent:[
                     {
                         label:'Digital Comics',
@@ -48,7 +45,7 @@
             </div>
             <div class="library-image">
                 <div class="row">
-                    <CardSeries v-for="(item, index) in serie " :key="index" :serie="item"/>
+                    <CardSeries v-for="(item, index) in products " :key="index" :serie="item"/>
                     <CardSeries />
                 </div>        
              </div>   

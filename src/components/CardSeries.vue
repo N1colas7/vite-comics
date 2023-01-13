@@ -8,7 +8,7 @@ export default {
 <template lang="">
     <div class="card">
         <div class="card-image">
-            
+            <img src={{serie.thumb}} alt="image">
         </div>
         <div class="card-name">
         </div>
@@ -20,5 +20,8 @@ export default {
         border: 1px solid white;
         text-align: center;
         padding: 10px;
+        .card-image{
+
+        }
     }
 </style>
