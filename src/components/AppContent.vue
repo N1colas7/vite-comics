@@ -44,11 +44,16 @@
                 <img src="/img/jumbotron.jpg">
             </div>
             <div class="library-image">
+                <div class="current-series">
+                    <span>CURRENT SERIES</span>
+                </div>
                 <div class="row">
                     <CardSeries v-for="(item, index) in products " :key="index" :serie="item"/>
-                    <CardSeries />
-                </div>        
-             </div>   
+                </div>  
+                <div class="load-more">
+                    <span>LOAD MORE</span>
+                </div>
+            </div>   
         </div>
     </div>
     <div class="linkContent-container">
@@ -66,7 +71,7 @@
     @use '../styles/partials/mixins' as *;
 
     .contents-image{
-        background-color: black;
+        background-color: rgb(51, 50, 50);
         color:white;
         width: 100%;
     }
@@ -99,11 +104,30 @@
     }
     .jumbo{
         img{
-            height: 400px;
+            height: 280px;
             width: 100%;
         }
     }
     .row{
         display: flex;
+        padding: 50px;
+        flex-wrap: wrap;
+    }
+    .load-more{
+        text-align: center;
+        padding: 20px;
+        span{
+            padding: 10px;
+            background-color: $primary;
+        }
+    }
+    .current-series{
+        span{
+            padding: 10px;
+            background-color: $primary;
+            position: relative;
+            left: 10%;
+            bottom: 10px;
+        }
     }
 </style>
